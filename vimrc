@@ -98,13 +98,13 @@ set cursorline
 
 " 设置 退出vim后，内容显示在终端屏幕, 可以用于查看和复制, 不需要可以去掉
 " 好处：误删什么的，如果以前屏幕打开，可以找回
-" set t_ti= t_te=
+set t_ti= t_te=
 
 
 " 鼠标暂不启用, 键盘党....
-"set mouse-=a
+set mouse-=a
 " 启用鼠标
- set mouse=a
+" set mouse=a
 " Hide the mouse cursor while typing
 " set mousehide
 
@@ -357,7 +357,7 @@ function! HideNumber()
 endfunc
 nnoremap <F2> :call HideNumber()<CR>
 " F3 显示可打印字符开关
-nnoremap <F7> :set list! list?<CR>
+nnoremap <F3> :set list! list?<CR>
 " F4 换行开关
 nnoremap <F4> :set wrap! wrap?<CR>
 
@@ -665,9 +665,9 @@ endif
 set background=dark
 set t_Co=256
 
-"colorscheme solarized
-"colorscheme molokai
-colorscheme desert
+colorscheme solarized
+" colorscheme molokai
+" colorscheme desert
 
 
 " 设置标记一列的背景颜色和数字一行颜色一致
@@ -685,8 +685,6 @@ highlight SpellRare term=underline cterm=underline
 highlight clear SpellLocal
 highlight SpellLocal term=underline cterm=underline
 
-" for NERDTRee
-nnoremap <silent> <F3> :NERDTree<CR>
 
 
 

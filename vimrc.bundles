@@ -35,7 +35,7 @@ Plug 'scrooloose/syntastic'
 " Group dependencies, vim-snippets depends on ultisnips
 " 代码片段快速插入 (snippets中,是代码片段资源,需要学习)
 " Snippets are separated from the engine. Add this if you want them:
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+" Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " auto complete
 " 代码自动补全
@@ -352,7 +352,7 @@ call plug#end()
 " YouCompleteMe {{{
     "youcompleteme  默认tab  s-tab 和自动补全冲突
     "let g:ycm_key_list_select_completion=['<c-n>']
-    let g:ycm_key_list_select_completion = ['<Down>']
+    let g:ycm_key_list_select_completion = ['<tab>']
     "let g:ycm_key_list_previous_completion=['<c-p>']
     let g:ycm_key_list_previous_completion = ['<Up>']
     let g:ycm_complete_in_comments = 1  "在注释输入中也能补全
@@ -392,11 +392,11 @@ call plug#end()
 
 
 " ultisnips {{{
-    let g:UltiSnipsExpandTrigger       = "<tab>"
-    let g:UltiSnipsJumpForwardTrigger  = "<tab>"
-    let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-    let g:UltiSnipsSnippetDirectories  = ['UltiSnips']
-    let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
+"    let g:UltiSnipsExpandTrigger       = "<tab>"
+"    let g:UltiSnipsJumpForwardTrigger  = "<tab>"
+"    let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+"    let g:UltiSnipsSnippetDirectories  = ['UltiSnips']
+"    let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
     " 定义存放代码片段的文件夹 .vim/UltiSnips下，使用自定义和默认的，将会的到全局，有冲突的会提示
     " 进入对应filetype的snippets进行编辑
     map <leader>us :UltiSnipsEdit<CR>
@@ -809,5 +809,6 @@ call plug#end()
     " setenv PYTHONIOENCODING UTF-8
     " nnoremap <leader>y :call Yapf()<cr>
 " }}}
-
+let g:syntastic_python_checkers=['pylint']
+let g:syntastic_python_pylint_args='--disable=C0111,R0903,C0301'
 "------------------------------------------- end of configs --------------------------------------------

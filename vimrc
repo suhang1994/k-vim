@@ -686,3 +686,5 @@ highlight clear SpellLocal
 highlight SpellLocal term=underline cterm=underline
 
 map <F3> :NERDTreeToggle <CR>
+autocmd FileType python map <buffer> <F8> :call Flake8()<CR>
+

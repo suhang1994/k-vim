@@ -27,6 +27,8 @@ endif
 
 call plug#begin('~/.vim/bundle')
 
+Plug 'nvie/vim-flake8'
+
 " 移动光标到插件名上, 使用'#'快速跳转到每个插件的配置处
 
 " syntastic
@@ -284,16 +286,16 @@ call plug#end()
 
     " checkers
     " 最轻量
-    " let g:syntastic_python_checkers=['pyflakes'] " 使用pyflakes
+    let g:syntastic_python_checkers=['flake8'] " 使用pyflakes
     " 中等
     " error code: http://pep8.readthedocs.org/en/latest/intro.html#error-codes
-    let g:syntastic_python_checkers=['pyflakes', 'pep8'] " 使用pyflakes,速度比pylint快
-    let g:syntastic_python_pep8_args='--ignore=E501,E225,E124,E712'
+    "let g:syntastic_python_checkers=['pyflakes', 'pep8'] " 使用pyflakes,速度比pylint快
+    "let g:syntastic_python_pep8_args='--ignore=E501,E225,E124,E712'
     " 重量级, 但是足够强大, 定制完成后相当个性化
-    " pylint codes: http://pylint-messages.wikidot.com/all-codes
-    " let g:syntastic_python_checkers=['pyflakes', 'pylint'] " 使用pyflakes,速度比pylint快
-    " let g:syntastic_python_checkers=['pylint'] " 使用pyflakes,速度比pylint快
-    " let g:syntastic_python_pylint_args='--disable=C0111,R0903,C0301'
+    "pylint codes: http://pylint-messages.wikidot.com/all-codes
+    "let g:syntastic_python_checkers=['pyflakes', 'pylint'] " 使用pyflakes,速度比pylint快
+    "let g:syntastic_python_checkers=['pylint'] " 使用pyflakes,速度比pylint快
+    "let g:syntastic_python_pylint_args='--disable=C0111,R0903,C0301'
 
     " if js
     " let g:syntastic_javascript_checkers = ['jsl', 'jshint']
@@ -809,6 +811,6 @@ call plug#end()
     " setenv PYTHONIOENCODING UTF-8
     " nnoremap <leader>y :call Yapf()<cr>
 " }}}
-let g:syntastic_python_checkers=['pylint']
-let g:syntastic_python_pylint_args='--disable=C0111,R0903,C0301'
+"let g:syntastic_python_checkers=['pylint']
+"let g:syntastic_python_pylint_args='--disable=C0111,R0903,C0301'
 "------------------------------------------- end of configs --------------------------------------------

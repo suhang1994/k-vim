@@ -665,8 +665,8 @@ endif
 set background=dark
 set t_Co=256
 
-colorscheme solarized
-" colorscheme molokai
+"colorscheme solarized
+ colorscheme molokai
 " colorscheme desert
 
 
@@ -685,6 +685,4 @@ highlight SpellRare term=underline cterm=underline
 highlight clear SpellLocal
 highlight SpellLocal term=underline cterm=underline
 
-
-
-
+map <F3> :NERDTreeToggle <CR>
